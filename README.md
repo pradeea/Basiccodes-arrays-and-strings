@@ -33,3 +33,26 @@
   {
     console.log("it is not a prime");
   }
+  
+  --------------------------------------
+  Sorting array based on repetetion
+  
+   const arr=[1,1,2,2,2,3];
+
+  function sortByFrequency(arr) {
+    const frequency = {};
+    arr.forEach(item => {
+        frequency[item] = (frequency[item] || 0) + 1;
+    });
+    const sortable = arr.map(item => [item, frequency[item]]);
+    console.log(`sort check ${sortable}`);
+    sortable.sort((a,b) => {
+      if (a[1] === b[1]) return a[0] - b[0];
+      else return a[1] - b[1];
+    });
+    return sortable.map(s => s[0]);
+    
+}
+  
+  console.log(sortByFrequency(arr));![sortarray frequency](https://user-images.githubusercontent.com/48400035/138892673-b101a189-e8b9-4d5a-beec-b2e457b0b515.png)
+

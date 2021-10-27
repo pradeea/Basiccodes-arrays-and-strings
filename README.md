@@ -1,5 +1,5 @@
 # Basiccodes-arrays-and-strings
-//finding factor
+//finding factorial
   var answer = 1;
   for(var i = num; i >= 1; i--){  //4
     answer = answer * i; //
